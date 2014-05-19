@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  - Sample namespace-based configuration
+  -
+  - $Id: applicationContext-security.xml 4074 2009-12-18 18:44:17Z ltaylor $
+  -->
+
+<!--  <beans:beans xmlns:beans="http://www.springframework.org/schema/beans" -->
+<!--     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" -->
+<!--     xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"> -->
+
+<!--     <beans:import resource="applicationContext.xml"/> -->
+
+    
+<!--     <http use-expressions="true" auto-config="true"> -->
+        
+        
+<!--         SEGURIDAD PARA LA ADMINISTRACIÓN DEL SISTEMA -->
+        
+<!-- 	   <intercept-url pattern="/cuadro_mandos" access="isAuthenticated()" /> -->
+<!-- 	   <intercept-url pattern="/incidenciaListado" access="isAuthenticated()" /> -->
+<!-- 	   <intercept-url pattern="/nuevaIncidencia" access="isAuthenticated()" /> -->
+<!-- 	   <intercept-url pattern="/peticion_alta_siguiente" access="isAuthenticated()" /> -->
+<!-- 	   <intercept-url pattern="/peticiones_alta" access="isAuthenticated()" /> -->
+<!-- 	   <intercept-url pattern="/peticion_alta" access="isAuthenticated()" /> -->
+<!-- 	   <intercept-url pattern="/reexpediciones" access="isAuthenticated()" /> -->
+<!-- 	   <intercept-url pattern="/peticiones_baja" access="isAuthenticated()" /> -->
+<!-- 	   <intercept-url pattern="/peticiones_modificacion" access="isAuthenticated()" /> -->
+<!-- 	   <intercept-url pattern="/peticion_modificacion" access="isAuthenticated()" /> -->
+<!-- 	   <intercept-url pattern="/socios" access="isAuthenticated()" /> -->
+<!-- 	   <intercept-url pattern="/socio" access="isAuthenticated()" /> -->
+<!-- 	   <intercept-url pattern="/subir_foto" access="isAuthenticated()" /> -->
+<!-- 	   <intercept-url pattern="/foto_socio" access="isAuthenticated()" /> -->
+<!-- 	   <intercept-url pattern="/guarda_socio" access="isAuthenticated()" /> -->
+<!-- 	   <intercept-url pattern="/modifica_socio" access="isAuthenticated()" /> -->
+<!-- 	   <intercept-url pattern="/incidenciasocio" access="isAuthenticated()" /> -->
+<!-- 	   <intercept-url pattern="/bajasocio" access="isAuthenticated()" /> -->
+<!-- 	   <intercept-url pattern="/ficha" access="isAuthenticated()" /> -->
+<!-- 	   <intercept-url pattern="/lista_socios" access="isAuthenticated()" /> -->
+<!-- 	   <intercept-url pattern="/lotesCerrados" access="isAuthenticated()" /> -->
+<!-- 	   <intercept-url pattern="/filtrar_lote_fecha" access="isAuthenticated()" /> -->
+<!-- 	   <intercept-url pattern="/exporta_carnets" access="isAuthenticated()" /> -->
+<!-- 	   <intercept-url pattern="/marcarLoteEnviado" access="isAuthenticated()" /> -->
+	   
+<!--        <access-denied-handler ref="accessDeniedHandler" /> -->
+        
+<!--         <form-login login-page="/inicio" /> -->
+<!--         <logout/> -->
+<!--     </http> -->
+
+
+ 	<!-- LOGIN BASICO. LOS USUARIOS VAN DIRECTAMENTE EN EL XML --> 
+<!-- 	<authentication-manager alias="authenticationManager" > -->
+<!-- 		<authentication-provider user-service-ref="login" > -->
+<!-- 			<password-encoder ref="passwordEncoder" /> --> 
+<!-- 		</authentication-provider>		 --> 
+<!-- 	</authentication-manager> -->
+	
+<!-- </beans:beans> -->

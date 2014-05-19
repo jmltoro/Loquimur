@@ -1,0 +1,90 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!--  Sustituimos el inyector de dependencias por defecto que incorpora Struts2 por Spring. De esta forma, eliminamos
+    la responsabilidad de crear objetos   
+    Referencia : http://struts.apache.org/2.0.11/docs/dependency-injection.html -->
+    <constant name="struts.objectFactory" value="spring" />
+    
+    <!-- Establecemos el modo de desarrollo. Struts2 se comporta de forma mas amigable, pero afecta al rendimiento. Hay que deshabilitar
+    cuando se implante 
+    Referencia : http://struts.apache.org/2.0.11/docs/devmode.html -->
+    <constant name="struts.devMode" value="false" />
+    <constant name="struts.configuration.xml.reload" value="false" /> 
+    
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+
+	<constant name="struts.custom.i18n.resources" value="Mensajes"/>
+	
+	<constant name="struts.i18n.encoding" value="UTF-8"/>
+	
+	 
+    <!-- Definicion de un paquete en struts.xml Referencia: http://struts.apache.org/2.0.11/docs/package-configuration.html -->
+    
+    
+    <package name="default" extends="struts-default,json-default">
+	    <result-types>
+	        <result-type name="tiles" 
+	        	class="org.apache.struts2.views.tiles.TilesResult" />
+	    </result-types>
+	   	
+	   	<interceptors>
+<!-- 		  	<interceptor name="menuInterceptor" class="menuInterceptor"/> -->
+
+		    <interceptor-stack name="all-default">
+				<interceptor-ref name="exception">
+					<param name="logEnabled">true</param>
+					<param name="logCategory">com.rtva.comercialweb</param>
+					<param name="logLevel">ERROR</param>
+				</interceptor-ref>
+<!-- 		    	<interceptor-ref name="menuInterceptor" /> -->
+		     	<interceptor-ref name="defaultStack"/>
+			</interceptor-stack>
+		</interceptors>
+       	
+       	<default-interceptor-ref name="all-default" />
+       	
+		<global-results>
+			<result name="excepcion" type="tiles">general.excepcion</result>
+			<result name="error" type="tiles">general.error</result>
+		</global-results>
+		
+		<global-exception-mappings>
+			<exception-mapping exception="java.lang.Exception" result="excepcion" />
+		</global-exception-mappings>
+       	
+        
+		<!-- Entidad VwEmision -->
+		
+		<action name="emisionListado" > 
+			<result name="success" type="tiles">listado.emision </result>
+		</action> 
+		
+		<action class="manejadorVwEmision" name="cargarGridEmisionByFilter" method="realizaBusquedaByFilter"> 
+			<result name="success" >pages/listados/jsonFile.jsp</result> 
+		</action> 
+		
+		<action class="emisionCombosAction" name="selectdeCanales" method="cogeCanales">  
+            <result name="success" >pages/listados/jsonFile.jsp</result>    				    		
+        </action>  
+        
+        <action class="emisionCombosAction" name="selectdeDestinos" method="cogeDestinos">  
+            <result name="success" >pages/listados/jsonFile.jsp</result>    				    		
+        </action>  
+		
+		<action class="emisionCombosAction" name="selectdeTratamientos" method="cogeTratamientos">  
+            <result name="success" >pages/listados/jsonFile.jsp</result>    				    		
+        </action>  
+		
+		<action class="manejadorVwEmision" name="exportarExcelEmision" method="exporta">
+			<result name="success" type="stream">
+				<param name="contentDisposition">attachment;filename=listadoRegistros.xls</param>
+				<param name="contentType">application/vnd.ms-excel</param>
+				<param name="inputName">inputStream</param>
+				<param name="bufferSize">1024</param>
+			</result>
+		</action> 
+		<!-- Fin Entidad VwEmision-->         
+       	
+	</package>	
+</struts>

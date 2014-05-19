@@ -1,0 +1,42 @@
+/* CSS Document */
+BUTTON.btn{
+	margin-left:3px;
+}
+.linea_form .col_13{
+	padding-top:0px;
+}
+.linea_form .col_23{
+	padding-top:0px;
+}
+.linea_form .col_33{
+	padding-top:0px;
+}
+.linea_form SELECT{
+	height:18px;
+	position:relative;
+	top:1px;
+}
+.linea_form .divchk{
+	padding-top:10px !important;
+}
+.botonera_sup{
+	position:relative;
+	right:0px;
+	text-align:right;
+	padding:0px 0px;
+}
+.botonera_13{
+     padding-top: 15px;
+}
+.botonera_13 button.btn{
+     width: 30px;
+}
+.botonera_13 input.btn{
+     width: 30px;
+}
+img.ui-datepicker-trigger {
+	top: 14px;
+}
+.linea_divisoria{
+	padding-top:5px;
+}

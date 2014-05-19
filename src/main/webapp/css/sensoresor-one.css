@@ -1,0 +1,123 @@
+body_ori {
+	font: normal 11px auto Verdana, Arial, Helvetica, sans-serif,"Trebuchet MS";
+	font-size: x-small; /* font size */
+	color: #4f6b72;
+	background: #FFFFFF;
+	margin: 0px 0px 0px 0px; /* top right bottom left */
+}
+
+.jspmaker {
+	color: ; /* text color */
+	font-family: ; /* font name */
+	font-size: x-small; /* font size */	
+}
+
+input, textarea, select {	
+	font-family: ; /* font name */
+	font-size: x-small; /* font size */
+} 
+
+a:active {
+	color: #4f6b72;  /* active link color */
+}
+
+a:link {
+	color: #4f6b72;  /* link color */
+}
+
+a:visited {
+	color: #4f6b72; /* visited link color */
+}
+
+/* main table */
+.ewTable {
+	width: 100%; /* table width */	
+	color: ; /* text color */
+	font-family: ; /* font name */
+	font-size: x-small; /* font size */
+	border-collapse: collapse;
+	border: none;
+	margin-left: auto; margin-right: auto; /* Lucas ... para centrar la tabla */
+}
+
+/* main table sin ancho */
+.ewTable2 {
+	width: ; /* table width */	
+	color: ; /* text color */
+	font-family: ; /* font name */
+	font-size: x-small; /* font size */
+	border-collapse: collapse;
+	border: none;
+}
+
+/* main table data cells */
+.ewTable td {
+	padding: 4px; /* cell padding */
+	border: 1px solid; /* cell spacing */
+	border-color: #CCCCCC;  /* table background color */
+	text-transform: ;
+}
+
+td { }
+
+/* main table header cells */
+.ewTableHeader {
+	font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #4f6b72;
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	border-top: 1px solid #C1DAD7;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-align: left;
+	/* padding: 6px 6px 6px 12px; */ /*Pongo el de abajo para que no descuadre */
+	padding: 0px 0px 0px 0px; 
+	background: #CAE8EA url(../images/bg_header.png) repeat;
+	background-size: 100% 100%;
+}
+/* main table header cells de otro color*/
+.ewTableHeader2 {
+	font: bold 10px "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif;
+	color: #4f6b72;
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	border-top: 1px solid #C1DAD7;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-align: left;
+	padding: 6px 6px 6px 12px;
+	background: #CAE8EA url(../images/bg_headerAmarillo_reves.png) repeat ;
+	background-size: 100% 100%;
+}
+
+.ewTableHeader a {	
+	color: #6f8b92; /* header font color */	
+}
+
+.ewTableHeader2 a {	
+	color: #8f8b92; /* header font color */	
+}
+
+/* main table row color */
+.ewTableRow {
+	background: #FfFfFf;
+	color: #797268;
+}
+
+/* main table alternate row color */
+.ewTableAltRow {
+	background-color: #F5F5f5; /* alt row color 2 */	
+}
+
+/* main table sorting indicator */
+.ewTableOrderIndicator {
+	font-family: Webdings;	
+}
+
+/* main table footer section */
+.ewTableFooter {
+	background-color: #FFFFE0;	
+}
+
+
+

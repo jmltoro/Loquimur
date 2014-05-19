@@ -1,0 +1,28 @@
+.utilsConfirma.ui-dialog .ui-dialog-buttonpane,
+.utilsConfirma .ui-dialog-content {
+	border: 0 !important;
+}
+.utilsConfirma .ui-button {
+	background-image: url("../images/fnd_boton.jpg") !important;
+	background-position: center center !important;
+	border: 1px solid #006699 !important;
+    cursor: pointer !important;
+	height: 19px !important;
+}
+.utilsConfirma .ui-button,
+.utilsConfirma .ui-button * {
+	color: #FFFFFF !important;
+	font-size: 11px !important;
+	font-weight: normal !important;
+	line-height: normal !important;
+}
+.utilsConfirma .ui-button:hover {
+	background-image: url("../images/fnd_boton_on.jpg") !important;
+}
+.utilsConfirma .ui-button-text {
+	padding: 0 !important;
+}
+.utilsConfirma .ui-button:hover,
+.utilsConfirma .ui-button:hover * {
+	color: #006699 !important;
+}

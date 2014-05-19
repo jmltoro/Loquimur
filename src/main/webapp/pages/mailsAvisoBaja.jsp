@@ -1,0 +1,1 @@
+Envio de mails de aviso baja terminado.

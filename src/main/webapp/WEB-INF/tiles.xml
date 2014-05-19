@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+       
+<tiles-definitions>
+	<definition name="baseLayout" template="/WEB-INF/jspf/baseLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/jspf/header.jsp" />		
+		<put-attribute name="cabecera" value="" />
+	    <put-attribute name="menuLateral" value="/WEB-INF/jspf/menuLateral.jsp" />	    
+	    <put-attribute name="menuHorizontal" value="/WEB-INF/jspf/menuHorizontal.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="formularioNuevo" value="" />
+		<put-attribute name="footer" value="/WEB-INF/jspf/footer.jsp" />
+	</definition>
+
+	<definition name="listado.emision" extends="baseLayout">
+		<put-attribute name="title" value="Listado de Emisiones" />
+		<put-attribute name="body" value="/pages/listados/emisionList.jsp" />
+	</definition>
+
+
+	
+	<definition name="panel" extends="baseLayout">
+		<put-attribute name="title" value="Listado Emisiones" />		
+		<put-attribute name="body" value="/pages/listados/emisionList.jsp" />
+	</definition>
+	
+	<definition name="panel" extends="baseLayout">
+		<put-attribute name="title" value="Panel" />		
+		<put-attribute name="body" value="/pages/inicio.jsp" />
+	</definition>
+	
+	<definition name="peticion_alta" extends="baseLayout">
+		<put-attribute name="title" value="Peticion Alta" />		
+		<put-attribute name="body" value="/pages/peticion_alta.jsp" />
+	</definition>
+	
+	<definition name="peticion_modificacion" extends="baseLayout">
+		<put-attribute name="title" value="Peticion modificacion" />		
+		<put-attribute name="body" value="/pages/peticion_modificacion.jsp" />
+	</definition>
+	
+	<definition name="general.excepcion" extends="baseLayout">
+		
+	</definition>
+
+	<definition name="general.excepcion" extends="baseLayout">
+		<put-attribute name="title" value="Mensajes de aviso" />		
+		<put-attribute name="body" value="/pages/excepcion.jsp" />
+	</definition>
+	
+	<definition name="general.error" extends="baseLayout">
+		<put-attribute name="title" value="Mensajes de aviso" />		
+		<put-attribute name="body" value="/pages/error.jsp" />
+	</definition>
+	
+	<!-- Gestión de Incidencias -->
+	
+	<definition name="listado.incidencias" extends="baseLayout">
+		<put-attribute name="title" value="Listado de Incidencias" />
+		<put-attribute name="body" value="/pages/listados/incidenciasList.jsp" />
+	</definition>
+	
+	<definition name="incidencia" extends="baseLayout">
+		<put-attribute name="title" value="Nueva Incidencia" />
+		<put-attribute name="body" value="/pages/incidencia.jsp" />
+	</definition>
+		
+	<definition name="listado.listado_peticiones_altas" extends="baseLayout">
+		<put-attribute name="title" value="Peticiones de alta" />
+		<put-attribute name="body" value="/pages/listados/peticionesAltaList.jsp" />
+	</definition>
+	
+	<definition name="listado.listado_reexpediciones" extends="baseLayout">
+		<put-attribute name="title" value="Peticiones de reexpedición" />
+		<put-attribute name="body" value="/pages/listados/reexpedicionesList.jsp" />
+	</definition>
+	
+	<definition name="listado.listado_peticiones_baja" extends="baseLayout">
+		<put-attribute name="title" value="Peticiones de baja" />
+		<put-attribute name="body" value="/pages/listados/peticionesBajaList.jsp" />
+	</definition>
+	
+	<definition name="listado.listado_peticiones_modificacion" extends="baseLayout">
+		<put-attribute name="title" value="Peticiones de baja" />
+		<put-attribute name="body" value="/pages/listados/peticionesModificacionList.jsp" />
+	</definition>
+	
+	<definition name="listado.socio" extends="baseLayout">
+		<put-attribute name="title" value="Socio" />
+		<put-attribute name="body" value="/pages/listados/sociosList.jsp" />
+	</definition>
+	
+	<definition name="listado.proximoLote" extends="baseLayout">
+		<put-attribute name="title" value="Próximo lote" />
+		<put-attribute name="body" value="/pages/listados/nuevoLoteList.jsp" />
+	</definition>
+	
+	<definition name="listado.lotesCerrados" extends="baseLayout">
+		<put-attribute name="title" value="Lotes cerrados" />
+		<put-attribute name="body" value="/pages/listados/lotesCerradosList.jsp" />
+	</definition>
+	
+	<definition name="ficha_socio" extends="baseLayout">
+		<put-attribute name="title" value="Socio" />
+		<put-attribute name="body" value="/pages/socio.jsp" />
+	</definition>
+	
+	<definition name="ficha_detalle_socio" extends="baseLayout">
+		<put-attribute name="title" value="Socio" />
+		<put-attribute name="body" value="/pages/ficha_socio.jsp" />
+	</definition>
+	
+	<definition name="servlet.mailsAvisoBaja" >
+		<put-attribute name="title" value="Socio" />
+		<put-attribute name="body" value="/pages/mailsAvisoBaja.jsp" />
+	</definition>
+	
+	<definition name="servlet.mailsFelicitaciones" >
+		<put-attribute name="title" value="Socio" />
+		<put-attribute name="body" value="/pages/mailsFelicitaciones.jsp" />
+	</definition>
+	
+	<definition name="servlet.procesaBajas" >
+		<put-attribute name="title" value="Socio" />
+		<put-attribute name="body" value="/pages/procesaBajas.jsp" />
+	</definition>
+	
+</tiles-definitions>

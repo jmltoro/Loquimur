@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop"   
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:sec="http://www.springframework.org/schema/security"
+    xsi:schemaLocation="http://www.springframework.org/schema/security 
+						http://www.springframework.org/schema/security/spring-security-3.2.xsd 
+						http://www.springframework.org/schema/beans 
+                        http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+                        http://www.springframework.org/schema/tx 
+                        http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+                        http://www.springframework.org/schema/aop                         
+                        http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+    
+<!-- ****************************** INICIO DE LA CONFIGURACION ********************************* -->    
+    <bean 
+    class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
+    
+     <bean id="propertyConfigurer" 
+     	 class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">  
+         <property name="locations">  
+             <list>  
+                 <value>classpath:Hibernate.properties</value>  
+                 <value>classpath:configuracion.properties</value>  
+             </list>  
+         </property>  
+     </bean> 
+ 
+    
+    <!-- Definicion del bean perteneciente a la factoria del entity manager -->
+    <bean id="entityManagerFactory"
+        class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        
+        <property name="jpaVendorAdapter">
+            <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+                <property name="database" value="${hibernate.database}" />
+                <property name="generateDdl" value="false"/>
+                <property name="showSql" value="${hibernate.show.sql.log}" />
+            </bean>
+        </property>
+        <property name="jpaProperties">
+	        <props>
+	        	<prop key="hibernate.dialect">org.hibernate.dialect.InformixDialect</prop>
+	        	<prop key="hibernate.connection.zeroDateTimeBehavior">convertToNull</prop>
+	        	<prop key="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</prop>
+	            <prop key="hibernate.c3p0.max_size">15</prop>
+	            <prop key="hibernate.c3p0.min_size">5</prop>
+	            <!-- prop key="hibernate.c3p0.max_statements">5</prop-->
+	            <prop key="hibernate.c3p0.timeout">3</prop>
+	            <prop key="hibernate.c3p0.idle_test_period">2</prop>
+	            <prop key="hibernate.connection.driver_class">${hibernate.connection.driver_class}</prop>
+	            <prop key="hibernate.connection.url">${hibernate.connection.url}</prop>
+				<prop key="hibernate.connection.username">${hibernate.connection.username}</prop>
+				<prop key="hibernate.connection.password">${hibernate.connection.password}</prop>
+	        </props>
+	    </property>
+    </bean>
+    <!-- Fin de la definicion del entity manager -->
+
+    <!-- Datasource con la configuracion de base de datos -->
+    <bean id="dataSource"
+        class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${hibernate.connection.driver_class}" />
+        <property name="url" value="${hibernate.connection.url}" />
+        <property name="username" value="${hibernate.connection.username}" />
+        <property name="password" value="${hibernate.connection.password}" />
+    </bean>
+
+    <bean id="transactionManager"
+        class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="entityManagerFactory" />
+    </bean>
+
+    <tx:annotation-driven transaction-manager="transactionManager" />
+    <!-- Fin de la configuracion del Datasource -->
+  
+   <bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+         <property name="basenames">
+                <list>
+                        <value>Mensajes</value>
+                        <value>Recursos</value>
+                </list>
+        </property>
+  </bean>
+  
+    <!-- Configuración Spring Security -->
+  
+	<bean id="filterChainProxy" class="org.springframework.security.web.FilterChainProxy" >
+		<constructor-arg>
+         <list > 
+         	<sec:filter-chain pattern="/**" filters="exceptionTranslationFilter"/>
+         </list>
+        </constructor-arg>
+	</bean>
+		
+	<bean id="exceptionTranslationFilter" class="org.springframework.security.web.access.ExceptionTranslationFilter">
+	  	<property name="authenticationEntryPoint" ref="authenticationProcessingFilterEntryPoint"/>
+		<property name="accessDeniedHandler" ref="accessDeniedHandler"/>
+	</bean>
+		
+	<bean id="accessDeniedHandler" class="org.springframework.security.web.access.AccessDeniedHandlerImpl">
+		<property name="errorPage" value="/index"/>
+	</bean>
+		
+	<bean id="authenticationProcessingFilterEntryPoint" class="org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint">
+		<property name="loginFormUrl" value="/index"/>
+		<property name="forceHttps" value="false"/>
+	</bean>
+	
+	<bean id="jasyptPasswordEncryptor" class="org.jasypt.util.password.StrongPasswordEncryptor" />
+		
+	<bean id="passwordEncoder" class="org.jasypt.spring.security3.PasswordEncoder">
+		<property name="passwordEncryptor">
+	    	<ref bean="jasyptPasswordEncryptor" />
+	    </property>
+	</bean>
+	
+	<!-- Fin de la Configuración de Spring Security -->
+	
+	  <!-- Configuración del servicio de Spring: MailSernder -->
+	
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+	  <property name="host" value="${setup.mail.host}"/>
+	  <property name="port" value="${setup.mail.port}"/>
+	  <property name="username" value="${setup.mail.user}"/>
+	  <property name="password" value="${setup.mail.password}"/>	  
+	  <property name="defaultEncoding" value="UTF-8"/>
+	</bean>
+	
+<!-- ********************************* FIN DE LA CONFIGURACION *********************************-->
+	
+
+<!-- *******************************************************************************************-->	
+<!-- ************************************** CARGA DE BEANS *************************************-->
+<!-- *******************************************************************************************-->
+	
+	<!-- <import resource="applicationContext-ENTITIES.xml"/> -->
+	
+	<import resource="applicationContext-SERVICES.xml"/>
+	
+	<import resource="applicationContext-ACTIONS.xml"/>
+	
+	
+<!-- ********************************* FIN DE LA CARGA DE BEANS ********************************-->
+</beans>

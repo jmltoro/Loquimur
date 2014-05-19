@@ -1,0 +1,239 @@
+body {
+	font-family: sans-serif;
+	font-size: 0.9em;
+	margin-top: 0;
+}
+
+fieldset{
+	margin-bottom: 10px;
+}
+
+button{
+	margin: 5px 0;
+}
+
+/* ids */
+#cabecera{
+	background-image: url(../resources/images/logo.jpg);
+	background-repeat: no-repeat;
+	background-position: left center;
+	height: 130px;
+}
+
+
+#zona_usuario{
+	margin-top: 15px;
+	float: right;
+	font-size: 0.8em;
+	font-weight: bold;
+	color: #B53836;
+}
+
+#nombre_aplicacion{
+	clear:both;
+	margin-top: 50px;
+	font-size: 2em;
+	color: #0095D6;
+	float: right;
+}
+
+
+.ui-widget,.ui-widget .ui-widget {
+	font-size: 0.9em !important;
+	color: #000 !important;
+}
+
+.ui-panel{
+	margin-bottom: 10px;
+}
+
+.ui-state-error{
+	color: #000 !important;
+}
+
+#ajaxStatus{
+	height: 15px;
+	padding: 5px 0 5px 0;
+	clear: both;
+}
+
+
+
+.login{
+	width: 650px;
+	margin: auto;
+	height: 260px;
+	background-image: url(../resources/images/logo-comercialweb.png);
+	background-repeat: no-repeat;
+	background-position: 50px center;
+	border: 1px dashed #0096D3;
+	background-color:#F4F6F7;
+	padding: 10px;
+}
+
+.panelLogin{
+	float: right;
+	margin-top: 20px;
+	margin-right: 20px;
+}
+
+
+#login_titulo{
+	width: 660px;
+	margin: auto;
+	font-family: Tahoma,arial;
+	margin-bottom: 5px;
+	font-size: 1.4em;
+	color: #333;
+	margin-top: 100px;
+}
+
+#desarrollo{
+	width: 660px;
+	margin: auto;
+	font-family: Tahoma,arial;
+	text-align: right;
+	margin-top: 5px;
+	font-size: 0.8em;
+	color: #999;
+}
+
+.ficha{
+}
+
+.ficha td{
+	vertical-align: top;
+}
+
+.ficha_etiqueta{
+	font-weight: bold;
+}
+
+.ficha_valor{
+	text-transform: uppercase;
+	color: #0095D6;
+}
+
+.ficha_fila1{
+}
+
+.ficha_fila2{
+}
+
+.ui-datatable-even{
+	background: #F4F9FC !important;
+}
+
+.ui-datatable-odd{
+	background: #DEEEFC !important;
+}
+
+.ui-datalist-data{
+	list-style: none;	
+	margin: 0;
+	padding: 10px;
+}
+
+
+
+.aclaracion{
+	font-size: 0.9em;
+	color: blue;
+	font-style: italic;
+}
+
+.label_secundaria{
+	font-size: 0.9em;
+	font-style: italic;
+}
+
+/* iconos */
+.icono {
+	padding: 5px 5px 5px 25px;
+	background-repeat: no-repeat;
+	background-position: 3px center;
+}
+
+.icono_user {
+	background-image: url(../resources/images/user-silhouette.png);
+}
+
+#seccion{
+	text-align: left;
+	padding: 5px;
+	color: #999;
+	font-size: 1.4em;
+	font-weight: bold;
+	margin-bottom: 10px;
+	background-color: #f8f8f8;
+	border: dashed 1px #ccc;
+}
+
+/* colores */
+
+.azul{
+	color: blue;
+}
+
+.apartado{
+	font-size: 1.2em;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.negrita{
+	font-weight: bold;
+}
+
+.celda_cabecera{
+	border: 1px solid #ccc;
+}
+
+.celda_datos_totales{
+	background-color: #E5C5C0;
+	border: 1px solid #ccc;
+}
+
+
+.tabla_informe{
+	background-color: #ddd;
+}
+
+.tabla_informe th{
+	padding: 10px;
+	color: #333;
+}
+
+.tabla_informe td{
+	padding: 5px;
+}
+
+.informes_th{
+	background-color: #1484E6;
+	color: white;
+	font-weight: bold;
+	text-align: center;
+}
+
+
+.informes_td{
+	text-align: right;
+	background-color: #ccc;
+	color: black;
+	font-weight: bold;
+}
+
+
+.boton_baja{
+	border: 2px red solid !important;
+}
+
+
+
+
+
+
+
+
+
+

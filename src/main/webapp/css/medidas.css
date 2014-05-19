@@ -1,0 +1,50 @@
+/* CSS Document */
+
+@font-face{  
+    font-family: MyFont;  
+    src: url('fonts/Discognate.eot'); /* For IE */ 
+    src: local('discognate'), url('fonts/Discognate.ttf') format('truetype'); /* For non-IE */ 
+}
+div#cuerpo {
+  background: #3ff;
+  margin: auto;
+  width: 80%;
+  padding: 10px;
+  text-align: center;
+
+  /* border-radius */
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  /* box-shadow */
+  -webkit-box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
+  -moz-box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
+  box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
+}
+.valorTH{
+    font-family: MyFont;
+    font-size: 150px;
+	margin-top:10px 0;
+	text-align:center;
+	line-height: 100px;
+}
+.tam1{
+    font-family: MyFont;
+    font-size: 40px;
+    margn-bottom:10px;
+}
+.tam2{
+    font-family: MyFont;
+    font-size: 34px;
+    margn-bottom:10px;
+}
+
+div#chart_div{
+	margin-left: 30%;
+	margin-top: 15px;
+}
+
+body{
+	height: 100%;
+	width: 100%;
+}

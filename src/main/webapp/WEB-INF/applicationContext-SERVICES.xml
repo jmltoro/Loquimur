@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop"   
+    xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                        http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+                        http://www.springframework.org/schema/tx 
+                        http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+                        http://www.springframework.org/schema/aop                         
+                        http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+    
+<!-- ************************************** DAOs - BEANS ****************************************-->
+	<bean id="canal" class="com.rtva.comercialweb.entities.Canal" />
+	<bean id="destino" class="com.rtva.comercialweb.entities.Destino" />
+	<bean id="bloque" class="com.rtva.comercialweb.entities.Bloque" />
+	<bean id="tratamiento" class="com.rtva.comercialweb.entities.Tratamiento" />
+	<bean id="vwEmision" class="com.rtva.comercialweb.entities.vistas.VwEmision" />
+	
+<!-- 	<bean id="configuracionDao" class="com.rtva.comercialweb.services.implementacion.ServicioGenericoImpl" > -->
+<!-- 		<constructor-arg> -->
+<!-- 			 <value>com.rtva.comercialweb.entities.Configuracion</value> -->
+<!-- 		</constructor-arg> -->
+<!-- 		<constructor-arg> -->
+<!-- 			 <value>java.lang.String</value> -->
+<!-- 		</constructor-arg> -->
+<!-- 	</bean>	 -->
+<!-- 	<bean id="incidenciaDao" class="com.rtva.comercialweb.services.implementacion.ServicioGenericoImpl" > -->
+<!-- 		<constructor-arg> -->
+<!-- 			 <value>com.rtva.comercialweb.entities.Incidencia</value> -->
+<!-- 		</constructor-arg> -->
+<!-- 		<constructor-arg> -->
+<!-- 			 <value>java.lang.String</value> -->
+<!-- 		</constructor-arg> -->
+<!-- 	</bean>	 -->
+<!-- 	<bean id="peticionAltaDao" class="com.rtva.comercialweb.services.implementacion.ServicioGenericoImpl" > -->
+<!-- 		<constructor-arg> -->
+<!-- 			 <value>com.rtva.comercialweb.entities.PeticionAlta</value> -->
+<!-- 		</constructor-arg> -->
+<!-- 		<constructor-arg> -->
+<!-- 			 <value>java.lang.String</value> -->
+<!-- 		</constructor-arg> -->
+<!-- 	</bean>	 -->
+<!-- 	<bean id="peticionBajaDao" class="com.rtva.comercialweb.services.implementacion.ServicioGenericoImpl" > -->
+<!-- 		<constructor-arg> -->
+<!-- 			 <value>com.rtva.comercialweb.entities.PeticionBaja</value> -->
+<!-- 		</constructor-arg> -->
+<!-- 		<constructor-arg> -->
+<!-- 			 <value>java.lang.String</value> -->
+<!-- 		</constructor-arg> -->
+<!-- 	</bean>	 -->
+<!-- 	<bean id="peticionModificacionDao" class="com.rtva.comercialweb.services.implementacion.PeticionModificacionServicioDAO" > -->
+<!-- 		<constructor-arg> -->
+<!-- 			 <value>com.rtva.comercialweb.entities.PeticionModificacion</value> -->
+<!-- 		</constructor-arg> -->
+<!-- 		<constructor-arg> -->
+<!-- 			 <value>java.lang.String</value> -->
+<!-- 		</constructor-arg> -->
+<!-- 	</bean>	 -->
+<!-- 	<bean id="reenvioDevolucionDao" class="com.rtva.comercialweb.services.implementacion.ServicioGenericoImpl" > -->
+<!-- 		<constructor-arg> -->
+<!-- 			 <value>com.rtva.comercialweb.entities.ReenvioDevolucion</value> -->
+<!-- 		</constructor-arg> -->
+<!-- 		<constructor-arg> -->
+<!-- 			 <value>java.lang.String</value> -->
+<!-- 		</constructor-arg> -->
+<!-- 	</bean>	 -->
+<!-- 	<bean id="siglaDao" class="com.rtva.comercialweb.services.implementacion.ServicioGenericoImpl" > -->
+<!-- 		<constructor-arg> -->
+<!-- 			 <value>com.rtva.comercialweb.entities.Sigla</value> -->
+<!-- 		</constructor-arg> -->
+<!-- 		<constructor-arg> -->
+<!-- 			 <value>java.lang.String</value> -->
+<!-- 		</constructor-arg> -->
+<!-- 	</bean>	 -->
+<!-- 	<bean id="socioDao" class="com.rtva.comercialweb.services.implementacion.ServicioGenericoImpl" > -->
+<!-- 		<constructor-arg> -->
+<!-- 			 <value>com.rtva.comercialweb.entities.Socio</value> -->
+<!-- 		</constructor-arg> -->
+<!-- 		<constructor-arg> -->
+<!-- 			 <value>java.lang.String</value> -->
+<!-- 		</constructor-arg> -->
+<!-- 	</bean>	 -->
+<!-- 	<bean id="logDao" class="com.rtva.comercialweb.services.implementacion.ServicioGenericoImpl" > -->
+<!-- 		<constructor-arg> -->
+<!-- 			 <value>com.rtva.comercialweb.entities.Log</value> -->
+<!-- 		</constructor-arg> -->
+<!-- 		<constructor-arg> -->
+<!-- 			 <value>java.lang.String</value> -->
+<!-- 		</constructor-arg> -->
+<!-- 	</bean>	 -->
+<!-- 	<bean id="secuenciaDao" class="com.rtva.comercialweb.services.implementacion.ServicioGenericoImpl" > -->
+<!-- 		<constructor-arg> -->
+<!-- 			 <value>com.rtva.comercialweb.entities.SecuenciaSocio</value> -->
+<!-- 		</constructor-arg> -->
+<!-- 		<constructor-arg> -->
+<!-- 			 <value>java.math.BigInteger</value> -->
+<!-- 		</constructor-arg> -->
+<!-- 	</bean>	 -->
+<!-- ************************************** Servicios - BEANS ****************************************-->
+	<bean id="canalServicio" class="com.rtva.comercialweb.services.implementacion.CanalServicioImpl" />
+	<bean id="destinoServicio" class="com.rtva.comercialweb.services.implementacion.DestinoServicioImpl" />
+	<bean id="bloqueServicio" class="com.rtva.comercialweb.services.implementacion.BloqueServicioImpl" />
+	<bean id="tratamientoServicio" class="com.rtva.comercialweb.services.implementacion.TratamientoServicioImpl" />
+	<bean id="vwEmisionServicio" class="com.rtva.comercialweb.services.implementacion.vistas.VwEmisionServicioImpl" />
+
+<!-- 	<bean id="configuracionServicio" class="com.rtva.comercialweb.services.implementacion.ConfiguracionServicioImpl"> -->
+<!-- 		<property name="serv" ref="configuracionDao"></property> -->
+<!-- 	</bean>	 -->
+<!-- 	<bean id="md5EncripterServicio" class="com.rtva.comercialweb.services.implementacion.MD5Encripter" /> -->
+<!-- 	<bean id="perfilServicio" class="com.rtva.comercialweb.services.implementacion.PerfilServicioImpl" /> -->
+<!-- 	<bean id="peticionAltaServicio" class="com.rtva.comercialweb.services.implementacion.PeticionAltaServicioImpl" > -->
+<!-- 		<property name="serv" ref="peticionAltaDao"></property> -->
+<!-- 		<property name="config" ref="configuracionServicio"></property> -->
+<!-- 		<property name="socioServ" ref="socioServicio"></property> -->
+<!-- 		<property name="ldap" ref="ldapServicio"></property> -->
+<!-- 	</bean>	 -->
+<!-- 	<bean id="peticionBajaServicio" class="com.rtva.comercialweb.services.implementacion.PeticionBajaServicioImpl"> -->
+<!-- 		<property name="serv" ref="peticionBajaDao"></property> -->
+<!-- 		<property name="config" ref="configuracionServicio"></property> -->
+<!-- 		<property name="socioServ" ref="socioServicio"></property> -->
+<!-- 	</bean>	 -->
+<!-- 	<bean id="peticionModificacionServicioo" class="com.rtva.comercialweb.services.implementacion.PeticionModificacionServicioImpl"> -->
+<!-- 		<property name="serv" ref="peticionModificacionDao"></property> -->
+<!-- 		<property name="config" ref="configuracionServicio"></property> -->
+<!-- 		<property name="socioServ" ref="socioServicio"></property> -->
+<!-- 	</bean>	 -->
+<!-- 	<bean id="usuarioServicio" class="com.rtva.comercialweb.services.implementacion.UsuarioServicioImpl" /> -->
+<!-- 	<bean id="incidenciaServicio" class="com.rtva.comercialweb.services.implementacion.IncidenciaServicioImpl"> -->
+<!-- 		<property name="serv" ref="incidenciaDao"></property> -->
+<!-- 		<property name="config" ref="configuracionServicio"></property> -->
+<!-- 	</bean>	 -->
+<!-- 	<bean id="socioServicio" class="com.rtva.comercialweb.services.implementacion.SocioServicioImpl"> -->
+<!-- 		<property name="serv" ref="socioDao"></property> -->
+<!-- 		<property name="config" ref="configuracionServicio"></property> -->
+<!-- 		<property name="secuenciaServ" ref="secuenciaDao"></property> -->
+<!-- 		<property name="ldap" ref="ldapServicio"></property> -->
+<!-- 		<property name="logServ" ref="logServicio"></property> -->
+<!-- 	</bean>	 -->
+<!-- 	<bean id="logServicio" class="com.rtva.comercialweb.services.implementacion.LogServicioImpl"> -->
+<!-- 		<property name="serv" ref="logDao"></property> -->
+<!-- 		<property name="config" ref="configuracionServicio"></property> -->
+<!-- 	</bean>	 -->
+<!-- 	<bean id="ldapServicio" class="com.rtva.comercialweb.services.implementacion.LdapServicioImpl"> -->
+<!-- 		<property name="config" ref="configuracionServicio"></property> -->
+<!-- 	</bean>	 -->
+	
+<!-- 	<bean id="loteServicio" class="com.rtva.comercialweb.services.implementacion.LoteServicioImpl"> -->
+<!-- 		<property name="serv" ref="socioDao"></property> -->
+<!-- 		<property name="logServ" ref="logServicio"></property> -->
+<!-- 		<property name="reenvDevServ" ref="reenvioDevolucionServicio"></property> -->
+<!-- 		<property name="config" ref="configuracionServicio"></property> -->
+<!-- 	</bean>	 -->
+
+<!-- 	<bean id="reenvioDevolucionServicio" class="com.rtva.comercialweb.services.implementacion.ReenvioDevolucionServicioImpl"> -->
+<!-- 		<property name="serv" ref="reenvioDevolucionDao"></property> -->
+<!-- 	</bean> -->
+	
+<!-- 	<bean id="mailServicio" class="com.rtva.comercialweb.services.implementacion.MailServicioImpl"> -->
+<!-- 	  <property name="active" value="true"/> -->
+<!-- 	  <property name="mailSender" ref="mailSender"/> -->
+<!-- 	  <property name="from" value="${setup.mail.sender}"/> -->
+<!-- 	</bean> -->
+	
+</beans>

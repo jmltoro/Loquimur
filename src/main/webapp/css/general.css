@@ -1,0 +1,1111 @@
+/* CSS Document */
+
+BODY{
+	background-image:url(../images/fnd_body.jpg);
+	background-position:top left;
+	background-repeat:repeat-x;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:0.7em;
+}
+INPUT, SELECT, TEXTAREA, BUTTON{
+	font-family:Arial, Helvetica, sans-serif !important;
+	font-size:11px !important;
+	color:#333333;
+}
+INPUT.disable, SELECT.disable, TEXTAREA.disable, BUTTON.disable{
+	color:#999999;
+	background-color: #FFFFFF;
+}
+LABEL{
+	font-size:11px;
+}
+IMG{
+	border:0;
+}
+H1{
+	color:#006699;
+	font-size:1.2em;
+	border-bottom:solid 2px #006699;
+	text-transform:uppercase;
+	/*margin-bottom:10px;*/
+}
+H2{
+	background-color:#006699;
+	color:#FFFFFF;
+	font-size:1.1em;
+	padding:5px;
+}
+H2 A{
+	color:#FFFFFF;
+	text-decoration:none;
+	cursor:pointer;
+}
+H2 A:hover{
+/*	color:#F49B3B;*/
+	color:#8AF0FF;
+/*	text-decoration:underline;*/
+}
+H3{
+	background-color:#009FB4;
+	color:#FFFFFF;
+	font-size:1em;
+	padding:2px 5px;
+	margin-top:20px;
+	text-transform:uppercase;
+}
+H4{
+	background-color:#DDDDDD;
+	color:#333333;
+	font-size:1em;
+	padding:2px 5px;
+	margin-top:20px;
+	text-transform:uppercase;
+}
+HR{
+	color:#E0DCDC;
+	height:2px;
+}
+A{
+	color:#006699;
+}
+A:hover{
+	color:#000000;
+}
+.sombra_contenedor{
+	width:984px;
+	margin:auto;
+	background-image:url(../images/fnd_contenedor.png);
+	background-position:top center;
+	background-repeat:repeat-y;
+}
+.contenedor{
+	width:978px;
+	border-top:solid 1px #BDBDBD;
+	margin:auto;
+}
+.bloque_cabecera{
+	height:38px;
+	background-image:url(../images/cti_0.jpg);
+	background-position:top center;
+	background-repeat:no-repeat;
+	position:relative;
+}
+.logo{
+	position:absolute;
+	top:10px;
+	left:14px;
+	font-size:1.8em;
+	font-family:comic;
+	color:darkgreen;
+}
+.bloque_miga{
+	height:25px;
+	position:relative;
+	font-size:0.9em;
+}
+.miga{
+	position:absolute;
+	left:10px;
+	top:8px;
+}
+.usuario{
+	position:absolute;
+	right:6px;
+	top:0px;
+}
+.usuario IMG{
+	position:relative;
+	top:5px;
+}
+.bloque_central{
+	clear:both;
+}
+.bloque_menu_horizontal{
+	width:100%;
+	float:left;
+	position:relative;
+	padding-bottom:5px;
+	color:#666666;
+}
+.bloque_menu{
+	width:202px;
+	float:left;
+	position:relative;
+	padding-bottom:50px;
+	color:#666666;
+}
+.bloque_menu UL{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+.bloque_menu SPAN.mn01{
+	display:block;
+	background-image:url(../images/img_mn01.png);
+	background-position:bottom left;
+	background-repeat:no-repeat;
+	padding:15px;
+	position:relative;
+	left:-3px;
+	color:#666666;
+	font-weight:bold;
+}
+.bloque_menu UL LI UL{
+	background-image:url(../images/fnd_mn02.jpg);
+	background-position:top left;
+	background-repeat:repeat-y;
+}
+.bloque_menu UL LI UL UL{
+	background-image:none;
+}
+.bloque_menu UL LI LI{
+	display:block;
+	position:relative;
+	left:-3px;
+	background-image:url(../images/img_mn02.png);
+	background-position:bottom left;
+	background-repeat:no-repeat;
+	padding:6px 15px;
+}
+.bloque_menu UL LI LI A{
+	color:#006699;
+	text-decoration:none;
+}
+.bloque_menu UL LI LI A:hover{
+	color:#000000;
+}
+.bloque_menu UL LI LI LI{	
+	background-image:url(../images/fnd_mn02_alto.jpg);
+	background-position:top left;
+	background-repeat:no-repeat;
+	padding:6px 10px 2px 10px;
+	font-size:0.9em;
+}
+.bloque_contenido{
+	width:760px;
+	float:left;
+	min-height:258px;
+	background-image:url(../images/fnd_contenido.png);
+	background-position:top left;
+	background-repeat:no-repeat;
+}
+.margen{
+	margin:5px; //Lucas. Estaba a 32px
+	margin-bottom:50px;
+}
+
+.botonera{
+	position:relative;
+	right:0px;
+	text-align:right;
+	padding:20px 0px;
+}
+.botonera_sup{
+	position:relative;
+	right:0px;
+	text-align:right;
+	padding:20px 0px 0px 0px;
+}
+INPUT.btn{
+	border:solid 1px lightgreen;
+	color:#FFFFFF;
+	font-weight:normal;
+	background-color:darkgreen;
+	background-position:center center;
+	cursor:pointer;
+	height:19px;
+	font-size:11px;
+}
+INPUT.btn:hover{
+	color:lightgreen;
+}
+
+
+
+BUTTON.btn{
+	border:solid 1px #006699;
+	color:#FFFFFF;
+	font-weight:normal;
+	background-image:url(../images/fnd_boton.jpg);
+	background-position:center center;
+	cursor:pointer;
+	height:19px;
+	font-size:11px;
+}
+BUTTON.btn:hover{
+	color:#006699;
+	background-image:url(../images/fnd_boton_on.jpg);
+}
+INPUT.btn2{
+	border:solid 1px #56CBB0;
+	color:#006699;
+	font-weight:normal;
+	background-image:url(../images/fnd_boton2.jpg);
+	background-position:center center;
+	cursor:pointer;
+	height:19px;
+	font-size:10px !important;
+	font-family:Tahoma !important;
+}
+INPUT.btn2:hover{
+	color:#000000;
+	background-image:url(../images/fnd_boton_on.jpg);
+}
+BUTTON.btn2{
+	border:solid 1px #56CBB0;
+	color:#006699;
+	font-weight:normal;
+	background-image:url(../images/fnd_boton2.jpg);
+	background-position:center center;
+	cursor:pointer;
+	height:19px;
+	font-size:10px !important;
+	font-family:Tahoma !important;
+}
+BUTTON.btn2:hover{
+	color:#000000;
+	background-image:url(../images/fnd_boton_on.jpg);
+}
+.btn_euros{
+     position:relative;
+     top:4px;
+     cursor:pointer;
+}
+.bloque_pie{
+	background-image:url(../images/fnd_sombra_baja_1px.png);
+	background-position:top center;
+	//background-repeat:no-repeat;
+	background-repeat:repeat-x; //Lucas. He puesto el icono de 1px de ancho y lo repito. Asi no tiene un ancho fijo y se adapta a la pantalla que exista. 
+	width:90%;
+	margin:auto;
+	color:#666666;
+	text-align:center;
+	padding-top:10px;
+	font-size:0.9em;
+}
+.pie_login{
+	margin:auto;
+	color:#666666;
+	text-align:center;
+	font-size:0.9em;
+}
+.clearboth{
+	clear:both;
+}
+.margen_interior{
+	width:100%;
+}
+BODY.body_login{
+	background-image:none;
+}
+
+.imagen_login{
+	background-image:url(../images/pass_key.png);
+	height: 256px;
+	width:256px;
+	margin-left:290px;
+}
+.contenedor_login{
+    position:absolute;
+	left: 50%;
+    top: 50%;
+	margin-top:-181px;
+	margin-left:-268px;
+}
+.bloque_contenido_login_generico{
+	width:536px;
+	height:362px;
+	background-repeat:no-repeat;
+	background-position:top left;
+	position:relative;
+}
+.form_login{
+/*	margin:auto;*/
+	width:130px;
+	padding-top:170px;
+	float:left;
+	margin-left:50px;
+}
+.certificado{
+	text-align:center;
+	position:absolute;
+	width:268px;
+	top:230px;
+	left:268px;
+}
+.olvidar_contr{
+	text-align:center;
+	padding-top:20px;
+}
+.botones_login{
+	padding-top:10px;
+	text-align:right;
+}
+.logar{
+	margin-bottom:10px;
+}
+label.error {
+	float: left;
+	font-size: 0.80em;
+	color: #ff0000;
+}
+.errorcenter{
+	/*float: left;*/
+	font-size: 0.80em;
+	color: #ff0000;
+	text-align:center;
+}
+.ok{
+	border:solid 1px #ACA899;
+	font-size:0.80em;
+	font-weight:bold;
+	color:#339900;
+	clear:both;
+	padding:15px 15px 10px 45px;
+	margin-top:10px;
+	margin-bottom:20px;
+	background-color:#FFFFFF;
+	background-image:url(../images/img_okal.jpg);
+	background-position:top left;
+	background-repeat:no-repeat;
+	display:table;
+	width:634px;
+	clear:both;
+}
+.validacion{
+	border:solid 1px #ACA899;
+	font-size:0.80em;
+	font-weight:bold;
+	color:#FF9900;
+	clear:both;
+	padding:15px 15px 10px 45px;
+	margin-top:10px;
+	margin-bottom:20px;
+	background-color:#FFFFFF;
+	background-image:url(../images/img_validaal.jpg);
+	background-position:top left;
+	background-repeat:no-repeat;
+	display:table;
+	width:634px;
+	clear:both;
+}
+.errorico{
+	border:solid 1px #ACA899;
+	font-size:0.80em;
+	font-weight:bold;
+	color:#990000;
+	clear:both;
+	padding:15px 15px 10px 45px;
+	margin-top:10px;
+	margin-bottom:20px;
+	background-color:#FFFFFF;
+	background-image:url(../images/img_erroral.jpg);
+	background-position:top left;
+	background-repeat:no-repeat;
+	display:table;
+	width:634px;
+	clear:both;
+	
+}
+.error_ok_col{
+	float:left;
+	/*line-height:15px;*/
+}
+.error_ok_col UL{
+	color:#333333;
+}
+.error_ok_col UL LI{
+	padding-bottom:7px;
+}
+.msg_pestana {
+	width:593px;
+}
+.msg_modal {
+	width:400px;
+}
+.checkeo{
+	width:20px !important;
+	position:relative;
+	top:3px;
+}
+.agrupacion_form{
+	background-color:#D9F0EF;
+	padding-top:10px !important;
+	padding-bottom:10px;
+}
+.nota {
+    background-color: #006699;
+    border: 1px solid #006699;
+    clear: both;
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 5px;
+    text-align: right;
+}
+.notafinal{
+	font-size:16px;
+}
+.criterios {
+    float: left;
+	font-size:13px;
+}
+.criterios label{
+	position:relative;
+	top:-7px;
+}
+.criterios A{
+	position:relative;
+	top:-1px;
+}
+.acordeon_cab {
+    background-image: url("../images/fnd_acordeon_cab.png");
+    background-position: left center;
+    background-repeat: repeat-x;
+    border: 1px solid #006699;
+    clear: both;
+    cursor: pointer;
+    padding: 5px;
+	position:relative;	
+	margin-top:1px;
+}
+.acordeon_cab_completo {
+	background-image: url("../images/fnd_acordeon_cab_completo.png");
+    border: 1px solid #087021;
+}
+.acordeon_cab_tit {
+    color: #FFFFFF;
+    /*float: left;*/
+    width: 630px;
+}
+.acordeon_cab_nota{
+	position:absolute;
+	right:10px;
+	top:5px;
+	color:#FFFFFF;
+	font-weight:bold;
+}
+SPAN.txtdestacado{
+	font-weight:bold;
+}
+SPAN.peso{
+	font-weight:bold;
+	color:#7DFCFF;
+}
+.acordeon_cuerpo {
+}
+.acordeon_cuerpo_hijos{
+	clear:both;
+	background-color:#E2F9F8;
+	border:solid 1px #006699;
+	border-top:0px;
+	padding:1px 10px 20px 10px;
+}
+.acordeon_cuerpo_cab{
+	clear:both;
+	background-color:#009FB4;
+	padding:3px 10px;
+	/*width:630px;	*/
+	margin:20px auto auto;
+	color:#FFFFFF;
+}
+.acordeon_cuerpo_nota {
+    color: #000000;
+    float: right;
+    font-weight: bold;
+    text-align: right;
+    width: 215px;
+}
+.acordeon_conjunto_preguntas {
+    clear: both;
+}
+.acordeon_pregunta {
+    /*background-image: url("../images/fnd_acordeon_pregunta.jpg");
+    background-position: left top;
+    background-repeat: repeat-x;*/
+    border-bottom: 1px solid #CCCCCC;
+    clear: both;
+	min-height:80px;
+}
+.acordeon_pregunta_completo {
+	background-color: #CAF4D7;
+}
+.acordeon_pregunta_texto {
+    float: left;
+    width: 350px;
+}
+.acordeon_pregunta_texto_pregunta {
+    clear: both;
+    padding: 10px;
+}
+.acordeon_respuesta {
+	float: right;
+    padding: 4px;
+    position: relative;
+    width: 280px;
+}
+.acordeon_respuesta_slider {
+    clear: both;
+    padding: 4px;
+}
+.slider_label {
+    clear: both;
+	color:#016799;
+	padding-bottom:10px;
+}
+.slider {
+    float: left;
+    width: 220px;
+}
+.slider_input {
+    float: right;
+    width: 50px;
+}
+.slider_input input {
+    width: 40px;
+}
+.bocadillo {
+    display: none;
+    position: absolute;
+    top: 50px;
+    width: 280px;
+    z-index: 3;
+}
+.top_bocadillo {
+    background-image: url("../images/top_bocadillo.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    height: 24px;
+    width: 279px;
+}
+.bottom_bocadillo {
+    background-image: url("../images/bottom_bocadillo.png");
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    padding-bottom: 10px;
+    width: 279px;
+}
+.divtxtbocadillo {
+    padding: 8px 10px 10px;
+    width: 250px;
+}
+.cierre {
+    clear: both;
+}
+.restablece_font{
+	font-size:0.9em;
+}
+UL.list_programas{
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+UL.list_programas LI{
+	margin-bottom:5px;
+	background-color:#E9E9E9;
+	padding:2px 5px;
+}
+UL.list_programas LI A{
+	text-decoration:none;
+}
+TD.tdclick:hover {
+	background-color: #DDDDDD;
+	cursor: pointer;
+}
+/* Formulario */
+INPUT.num{
+	text-align:right;
+}
+img.ui-datepicker-trigger {
+    cursor: pointer;
+	left: 90px;
+    position: absolute;
+    top: 33px;
+}
+.linea_form{
+	clear:both;
+	padding:0px;
+	margin:0px;
+}
+.linea_divisoria{
+	clear:both;
+	padding:0px;
+	/*padding-top:25px;*/
+	margin:0px;
+	border-bottom:solid 2px #DDDDDD;
+	margin-bottom:25px;
+	margin-top:25px;
+}
+.sinmgbottom{
+     margin-bottom:0px;
+}
+.linea_form .col_12{
+	width:50%;
+	float:left;
+	padding-top:20px;
+	position:relative;
+}
+.linea_form .col_13{
+	width:232px;
+	float:left;
+	padding-top:20px;
+	position:relative;
+}
+.botonera_13{
+	float: left;
+	padding-top: 33px;
+}
+.linea_form .col_13 INPUT{
+	width:212px;
+	margin:0px;
+	padding:0px;
+}
+.linea_form .col_13 INPUT.cif_tel{
+	width:80px;
+	margin:0px;
+	padding:0px;
+}
+.linea_form .col_13 INPUT.fecha{
+	width:80px;
+	margin:0px;
+	padding:0px;
+}
+.linea_form .col_13 SELECT{
+	width:216px;
+	margin:0px;
+	padding:0px;
+}
+.linea_form .col_13_modal{
+	width:150px;
+	float:left;
+	padding-top:20px;
+	position:relative;
+}
+
+.linea_form .col_22_modal{
+	width:225px;
+	float:left;
+	padding-top:20px;
+	position:relative;
+}
+
+.linea_form .col_22_modal INPUT{
+	width:200px;
+	margin:0px;
+	padding:0px;
+}
+
+.linea_form .col_23_modal{
+	width:300px;
+	float:left;
+	padding-top:20px;
+	position:relative;
+}
+.linea_form .col_33_modal{
+	width:450px;
+	float:left;
+	padding-top:20px;
+	position:relative;
+}
+.linea_form .col_33_modal TEXTAREA{
+	width:430px;
+	height:80px;
+	margin:0px;
+	padding:0px;
+}
+.linea_form .col_13_modal INPUT{
+	width:130px;
+	margin:0px;
+	padding:0px;
+}
+.linea_form .col_13_modal INPUT.fecha{
+	width:80px;
+	margin:0px;
+	padding:0px;
+}
+.linea_form .col_23_modal SELECT{
+	width:285px;
+	margin:0px;
+	padding:0px;
+}
+.linea_form .col_33_modal SELECT{
+	width:436px;
+	margin:0px;
+	padding:0px;
+}
+.linea_form .col_13_modal SELECT{
+	width:130px;
+	margin:0px;
+	padding:0px;
+	height: 20px;
+}
+.linea_form .col_23{
+	width:464px;
+	float:left;
+	padding-top:20px;
+	position:relative;
+}
+.linea_form .col_23 INPUT{
+	width:444px;
+	margin:0px;
+	padding:0px;
+}
+.linea_form .col_23 INPUT.cif_tel{
+	width:80px;
+	margin:0px;
+	padding:0px;
+}
+.linea_form .col_23 INPUT.fecha{
+	width:80px;
+	margin:0px;
+	padding:0px;
+}
+.linea_form .col_23 SELECT{
+	width:448px;
+	margin:0px;
+	padding:0px;
+}
+.linea_form .col_23 TEXTAREA{
+	width:444px;
+	height:80px;
+	margin:0px;
+	padding:0px;
+}
+.linea_form .col_33{
+	width:696px;
+	float:left;
+	padding-top:20px;
+	position:relative;
+}
+.linea_form .col_33 INPUT{
+	width:676px;
+	margin:0px;
+	padding:0px;
+}
+.linea_form .col_33 INPUT.cif_tel{
+	width:80px;
+	margin:0px;
+	padding:0px;
+}
+.linea_form .col_33 INPUT.fecha{
+	width:80px;
+	margin:0px;
+	padding:0px;
+}
+.linea_form .col_33 SELECT{
+	width:680px;
+	margin:0px;
+	padding:0px;
+}
+.linea_form .col_33 TEXTAREA{
+	width:676px;
+	height:100px;
+	margin:0px;
+	padding:0px;
+}
+.linea_form .divchk{
+	padding-top:33px;
+}
+.campos_obligatorios{
+	background-image:url(../images/asterisco.gif);
+	background-repeat:no-repeat;
+	background-position:0px 3px;
+	padding-left:10px;
+}
+label.obligatorio,
+.obligatorio{
+	background-image:url(../images/asterisco.gif);
+	background-repeat:no-repeat;
+	background-position:0px 3px;
+	padding-left:10px;
+}
+label.opcional{
+}
+table.tabla_datos {
+    border-collapse: collapse;
+    border-top: 2px solid #006699;
+	border-left: 2px solid #006699;
+	border-right: 2px solid #006699;
+	border-bottom: 2px solid #006699;
+    margin-top: 17px;
+    width: 100%;
+}
+table.tabla_datos th {
+    background-color: #E2F9F8;
+    border-bottom: 1px solid #006699;
+    color: #000000;
+    font-weight: bold;
+    padding: 4px;
+}
+table.tabla_datos td {
+    border-bottom: 1px solid #006699;
+    border-left: 1px solid #006699;
+    padding: 4px;
+    text-align: center;
+}
+table.tabla_datos td TEXTAREA{
+	width:550px;
+	height:60px;
+	margin:0px;
+	padding:0px;
+	border:0px;
+}
+.w120 {
+    width: 120px;
+}
+/* Fin formulario */
+/* Buscador listado */
+.buscador_header{
+	background-image:url(../images/buscador_header.png);
+	background-position:center left;
+	background-repeat:repeat-x;
+	background-color:#CCFEFF;
+	padding-bottom: 10px; //Lucas. He añadido esto para que se centre verticalmente el texto y el boton de imprimir
+	padding-left: 8px;
+	padding-top:4px;
+	color: #FFFFFF;
+	border:solid 1px #006699;
+	text-transform:uppercase;
+	height:17px;
+}
+.buscador_body{
+	background-color: #CCFEFF;
+	border:solid 1px #006699;
+	border-top:solid 0px #DFDFDF;
+	padding-left: 0;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color:#000000;
+}
+.w449{
+	width: 449px;
+}
+.w441{
+	width: 441px;
+}
+.buscador_body_check{
+	background-color: #CCFEFF;
+	border:solid 1px #006699;
+	border-top:solid 0px #DFDFDF;
+	padding-left: 20px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color:#000000;
+}
+
+.filtertable INPUT{
+	font-family:Verdana,Arial;
+	font-size:11px;
+	color:#333333;
+	margin-top:3px;
+	margin-bottom:0px;
+}
+.filtertable SELECT{
+	font-family:Verdana,Arial;
+	font-size:11px;
+	color:#333333;
+	margin-top:3px;
+	margin-bottom:0px;
+	height:19px;
+}
+.filtertable INPUT.btn_OLD{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:11px;
+	color:#FFFFFF;
+	height:19px;
+	padding-left:0px;
+	padding-right:0px;
+}
+.filtertable input.btn:hover_OLD{
+	color:#006699;
+}
+
+/* Lucas ... He modificado el css de los botones de la búsqueda ... */
+.filtertable INPUT.btn{
+	height: 21px;
+	display: inline-block;
+	zoom: 1; /* zoom and *display = ie7 hack for display:inline-block */
+	*display: inline;
+	vertical-align: baseline;
+	margin: 0 2px;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 11px/100% Arial, Helvetica, sans-serif;
+	padding: 1px .5em .5em .55em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-border-radius: .5em; 
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	color: #606060;
+	border: solid 1px #b7b7b7;
+	background: #fff;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ededed));
+	background: -moz-linear-gradient(top,  #fff,  #ededed);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed');	
+}
+
+.filtertable input.btn:hover{
+	text-decoration: none;
+	background: #ededed;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#dcdcdc));
+	background: -moz-linear-gradient(top,  #fff,  #dcdcdc);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dcdcdc');
+}
+
+
+
+/* Fin Buscador Listado */
+
+/* Acordeon Interior */
+.cabecera_acordeon_interior{
+	border:solid 1px #009FB4;
+	background-image:url(../images/cabecera_pest_int.gif);
+	background-position:center left;
+	background-repeat:repeat-x;
+	margin-top:1px;
+	color:#016799;
+	font-weight:bold;
+	font-size:11px;
+	padding:2px 10px;
+	cursor: pointer;
+}
+.cont_acordeon_interior{
+	border:solid 1px #009FB4;
+	border-top:0px;
+	padding:10px 10px;
+}
+TABLE.interior_acordeon{
+	width:100%;
+	font-size:11px;
+	background-color:#EBEBE4;
+	color:#666666;
+/*	margin-bottom:10px;*/
+}
+TABLE.interior_acordeon TD{
+	padding:4px 10px;
+}
+TABLE.interior_acordeon TD.blanco{
+	background-color:#FFFFFF;
+	height:6px;
+}
+TABLE.interior_acordeon TD.tit{
+	color:#333333;
+	font-weight:bold;
+}
+TABLE.interior_acordeon TD SPAN.enunciado{
+	font-weight:bold;
+}
+TABLE.interior_acordeon TD.botones{
+	text-align:right;
+}
+/* Fin acordeon interior */
+
+.desplegable {
+	background-image:url(../images/ico_desplegable.png);
+	background-position:3px 3px;
+	background-repeat:no-repeat;
+	padding: 2px 20px;
+}
+
+
+/* jqgrid */
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{
+	border: 1px solid #006699 !important;
+}
+
+.ui-widget-content{
+	//border: 1px solid #006699 !important;
+	border: 1px solid #CCCCCC !important; //Lucas. Pongo un color mas claro a los bordes
+	background-color:#FFFFFF !important;
+}
+// ----- Lucas. Cambio de colores y negrita en cabecera de la tabla 
+.ui-row-ltr td {
+	color: #797268;
+}
+.jqgrow td {
+	color: #097260;
+}
+.ui-jqgrid-htable th div {
+	font-weight:bold;
+	color:#4F6B72;
+}
+// ------
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default{
+	font-weight:normal !important;
+	text-align:left !important;
+	//border-color:#006699 !important; 
+	border-color:#CCCCCC !important; //Lucas. Pongo un color mas claro a los bordes
+	color:#002364 !important;
+}
+.ui-corner-tr {
+    -moz-border-radius-topright: 0px !important;
+}
+.ui-corner-tl {
+    -moz-border-radius-topleft: 0px !important;
+}
+.ui-corner-all {
+    -moz-border-radius: 0px !important;
+}
+.ui-jqgrid .ui-pg-input {
+    height: 12px !important;
+}
+.ui-jqgrid .ui-pg-table td{
+	/* background-color:#CCFEFF; */
+	/* background-image: url("../images/bg_header.png"); */	/*Lucas. Ver nota inferior. */
+	background-color: #B9D1EA;
+}
+.ui-th-ltr, .ui-jqgrid .ui-jqgrid-htable th.ui-th-ltr {
+	/* background-image: url("../images/bg_header.png"); */ /*Lucas. Este lucas y el anterior son para que aparezca el degradado en la cabecera de la tabla y en el pie. */
+    background-color: #B9D1EA ;       /* Lucas. Pongo el color mas oscuro del degradado de la rejilla. He usado un grafico porque no coge el 'background-color' */
+}
+.ui-widget-header{
+	border-color:#006699 !important;
+}
+.ui-jqgrid .ui-jqgrid-title{
+	font-size:1.1em !important;
+	font-weight:normal !important;
+}
+.ui-tabs .ui-tabs-panel{
+	border:0 !important;
+}
+.ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a{
+	font-size:11px;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a{
+	color:#333333 !important;
+}
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited{
+	color:#006699 !important;
+}
+.ui-widget {
+	font-family:Arial, Helvetica, sans-serif !important;
+	/*font-size:1em;*/
+}
+
+
+
+
+/* FIN jqgrid */
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	/* Reglas especÃ­ficas para Safari 3.0 y Chrome aquÃ­ */
+	.ok{
+		width:694px;
+	}
+	.validacion{
+		width:694px;
+	}
+	.errorico{
+		width:694px;
+	}
+
+
+
+
+
+}

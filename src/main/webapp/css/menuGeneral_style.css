@@ -1,0 +1,77 @@
+#mmenu {
+    height: 19px;
+}
+#mmenu a, #mmenu img {
+    display: block;
+    float: left;
+}
+.mmenu {
+    background: url("../images/button.jpg") repeat scroll 0 0 transparent;
+    border-left: 1px solid #FFFFFF;
+    color: #000000;
+    font: bold 11px/19px verdana;
+    padding: 0 5px;
+}
+a.mmenu:link {
+    color: #000000;
+    text-decoration: none;
+}
+a.mmenu:visited {
+    color: #000000;
+    text-decoration: none;
+}
+a.mmenu:hover, a#ma.mmenu {
+    background: url("images/button_m_over.jpg") repeat scroll 0 0 transparent;
+    color: #808080;
+    text-decoration: none;
+}
+#smenu {
+    height: 18px;
+}
+#smenu a, #smenu img {
+    display: block;
+    float: left;
+}
+.smenu {
+    //background: url("images/sub_button_m_over.jpg") repeat scroll 0 0 transparent;    //Lucas. Quito la imagen de fondo para que se vea el 'fondo'
+    border-left: 1px solid #FFFFFF;
+    color: #000000;
+    font: 10px/18px verdana;
+    padding: 0 5px;
+}
+a.smenu:link {
+    color: #000000;
+    text-decoration: none;
+}
+a.smenu:visited {
+    color: #000000;
+    text-decoration: none;
+}
+a.smenu:hover, a#sa.smenu {
+    background: url("../images/sub_button_m_over.jpg") repeat scroll 0 0 transparent;
+    color: #808080;
+    font-weight: bold; //Lucas. Añadido para que resalte un poco mas
+    text-decoration: none;
+}
+
+.rvts72 {
+    color: #008000;
+    font: 29px "Comic Sans MS",comic sans MS,verdana,sans-serif;
+}
+.rvts65 {
+    color: #008000;
+    font: bold 13px "Comic Sans MS",comic sans MS,verdana,sans-serif;
+}
+a.rvts71, .rvts71 {
+    color: #EC5800;
+    font: italic bold 13px "Comic Sans MS",comic sans MS,verdana,sans-serif;
+    text-decoration: underline;
+}
+.rvts64 {
+    color: #008000;
+    font: 13px "Comic Sans MS",comic sans MS,verdana,sans-serif;
+}
+.rvts0, td, p {
+    color: #000000;
+    font-size: 12px;
+}
